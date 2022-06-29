@@ -108,6 +108,10 @@ class AJXCache {
         if (ajxExtensionConfig == null) {
             ajxExtensionConfig = new AJXExtensionConfig()
         }
+
+        if (ajxExtensionConfig.timeTraceEnabled) {
+            project.gradle.addListener(new TimeTrace())
+        }
     }
 
     File getCacheDir() {
@@ -150,6 +154,7 @@ class AJXCache {
         }
 
         ajxExtensionConfig.enabled = extension.enabled
+        ajxExtensionConfig.timeTraceEnabled = extension.timeTraceEnabled
         ajxExtensionConfig.ajcArgs = extension.ajcArgs
         ajxExtensionConfig.includes = extension.includes
         ajxExtensionConfig.excludes = extension.excludes
