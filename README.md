@@ -76,7 +76,7 @@ aspectjx {
 }
 ```
 
-** Tasks time work printing **
+**Tasks time work printing**
 
 ```groovy
 aspectjx {
