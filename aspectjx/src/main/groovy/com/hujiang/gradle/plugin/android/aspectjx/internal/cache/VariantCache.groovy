@@ -15,7 +15,6 @@
 package com.hujiang.gradle.plugin.android.aspectjx.internal.cache
 
 import com.android.build.api.transform.QualifiedContent
-import com.android.builder.model.AndroidProject
 import com.google.common.collect.ImmutableSet
 import com.google.gson.reflect.TypeToken
 import com.hujiang.gradle.plugin.android.aspectjx.internal.AJXUtils
@@ -60,7 +59,7 @@ class VariantCache {
     }
 
     private void init() {
-        cachePath = project.buildDir.absolutePath + File.separator + AndroidProject.FD_INTERMEDIATES + "/ajx/" + variantName
+        cachePath = project.buildDir.absolutePath + File.separator + "intermediates/ajx/" + variantName
         aspectPath = cachePath + File.separator + "aspecs"
         includeFilePath = cachePath + File.separator + "includeFiles"
         excludeFilePath = cachePath + File.separator + "excludeFiles"
