@@ -18,7 +18,6 @@ package com.hujiang.gradle.plugin.android.aspectjx
 
 import com.android.build.gradle.AppExtension
 import com.android.build.gradle.AppPlugin
-import com.hujiang.gradle.plugin.android.aspectjx.internal.TimeTrace
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 
