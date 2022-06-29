@@ -14,10 +14,10 @@
  */
 package com.hujiang.gradle.plugin.android.aspectjx.internal.cache
 
-import com.android.builder.model.AndroidProject
 import com.hujiang.gradle.plugin.android.aspectjx.AJXConfig
 import com.hujiang.gradle.plugin.android.aspectjx.AJXExtension
 import com.hujiang.gradle.plugin.android.aspectjx.internal.AJXUtils
+import com.hujiang.gradle.plugin.android.aspectjx.internal.TimeTrace
 import com.hujiang.gradle.plugin.android.aspectjx.internal.model.AJXExtensionConfig
 import org.apache.commons.io.FileUtils
 import org.aspectj.weaver.Dump
@@ -92,7 +92,7 @@ class AJXCache {
     }
 
     private void init() {
-        cachePath = project.buildDir.absolutePath + File.separator + AndroidProject.FD_INTERMEDIATES + "/ajx"
+        cachePath = project.buildDir.absolutePath + File.separator + "intermediates/ajx"
         extensionConfigPath = cachePath + File.separator + "extensionConfig.json"
 
         if (!cacheDir.exists()) {
