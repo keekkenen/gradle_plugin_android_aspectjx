@@ -28,6 +28,7 @@ class AJXExtension {
     List<String> ajcArgs = new ArrayList<>()
 
     boolean enabled = true
+    boolean timeTraceEnabled = false
 
 
     AJXExtension include(String... filters) {
@@ -56,12 +57,13 @@ class AJXExtension {
 
 
     @Override
-    public String toString() {
+    String toString() {
         return "AJXExtension{" +
                 "includes=" + Arrays.toString(includes) +
                 ", excludes=" + Arrays.toString(excludes) +
                 ", ajcArgs=" + Arrays.toString(ajcArgs) +
                 ", enabled=" + enabled +
-                '}';
+                ", timeTraceEnabled=" + timeTraceEnabled +
+                '}'
     }
 }
