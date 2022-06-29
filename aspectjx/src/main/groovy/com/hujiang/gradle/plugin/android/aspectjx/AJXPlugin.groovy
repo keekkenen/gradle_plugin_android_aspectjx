@@ -49,9 +49,6 @@ class AJXPlugin implements Plugin<Project> {
         project.extensions.create("aspectjx", AJXExtension)
 
         if (project.plugins.hasPlugin(AppPlugin)) {
-            //build time trace
-            project.gradle.addListener(new TimeTrace())
-
             //register AspectTransform
             AppExtension android = project.extensions.getByType(AppExtension)
             project.logger.quiet("[ajx] register AJXTransform")
