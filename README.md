@@ -76,6 +76,15 @@ aspectjx {
 }
 ```
 
+** Tasks time work printing **
+
+```groovy
+aspectjx {
+	timeTraceEnabled true
+}
+```
+>This option cached gradle and changed value will reset after gradle daemon stopping.
+
 
 ## 适配情况
 
