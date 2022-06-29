@@ -27,6 +27,9 @@ class AJXExtensionConfig implements Serializable {
     @SerializedName("enabled")
     boolean enabled = true
 
+    @SerializedName("timeTraceEnabled")
+    boolean timeTraceEnabled = false
+
     @SerializedName("ajcArgs")
     List<String> ajcArgs = new ArrayList<>()
 
